@@ -5,7 +5,7 @@ Denne repository indeholder en simpel opsætning af en **Ollama server** via Doc
 ## Teknisk Overblik
 Ollama er et værktøj, der gør det muligt at køre store sprogmodeller (LLMs) som Llama 3, Mistral og Phi-3 direkte på din egen hardware uden behov for en cloud-løsning.
 
-- **Port:** Serveren kører på port `11434`.
+- **Port:** Serveren kører på port `11435` (forskudt fra standardport 11434 for at undgå konflikter, hvis du også kører Ollama nativt på din host-maskine/WSL).
 - **Persistens:** Dine hentede modeller bliver gemt i en Docker volume (`ollama_data`), så de ikke skal hentes igen, når containeren genstartes.
 
 ## Opstart af Serveren
@@ -51,7 +51,7 @@ Denne opsætning er konfigureret til at være selvkørende:
 
 ## Integration med andre services
 Du kan forbinde til din Ollama server fra andre applikationer ved at pege dem mod:
-`http://localhost:11434` (eller IP-adressen på din maskine).
+`http://localhost:11435` (eller IP-adressen på din maskine).
 
 ## Stop serveren
 Når du er færdig med at bruge serveren, kan du stoppe den for at frigive RAM og CPU-ressourcer:
