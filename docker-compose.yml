@@ -3,7 +3,8 @@ services:
     image: ollama/ollama:latest
     container_name: ollama-standalone
     ports:
-      - "11434:11434"
+      # Isoleret port (11435) for at undgå konflikt med nativ Ollama (11434)
+      - "11435:11434"
     volumes:
       - ollama_data:/root/.ollama
     restart: unless-stopped
