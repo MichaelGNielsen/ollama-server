@@ -16,12 +16,15 @@ The setup consists of a single service running the official Ollama image.
 ## Operational Commands
 
 ### Starting the Server
+
 To start the Ollama server in detached mode:
+
 ```bash
 docker-compose up -d
 ```
 
 ### Stopping the Server
+
 To stop and remove the containers:
 ```bash
 docker-compose down

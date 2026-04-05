@@ -3,12 +3,14 @@ services:
     image: ollama/ollama:latest
     container_name: ollama-standalone
     ports:
-      # Isoleret port (11435) for at undgå konflikt med nativ Ollama (11434)
-      - "11435:11434"
+      # Tilbage til standard port
+      - "11434:11434"
     environment:
       - OLLAMA_NUM_CTX=32768
     volumes:
       - ollama_data:/root/.ollama
     restart: unless-stopped
-    entrypoint: ["/bin/sh", "-c", "ollama serve & sleep 10 && ollama pull gemma3:4b && wait"]volumes:
+    entrypoint: ["/bin/sh", "-c", "ollama serve & sleep 10 && ollama pull gemma3:4b && wait"]
+
+volumes:
   ollama_data:
