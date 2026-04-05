@@ -30,7 +30,26 @@ Kør denne kommando for at hente og tale med modellen:
 docker exec -it ollama-standalone ollama run phi3
 docker exec -it ollama-standalone ollama run llama3.2:3b
 docker exec -it ollama-standalone ollama run gemma3:4b
+docker exec -it ollama-standalone ollama run gemma2:9b
+docker exec -it ollama-standalone ollama run llama3.1:8b
 ```
+
+### Scripted Model Downloads
+
+For nemmere administration af model downloads, kan du bruge et hjælpescript `pull_models.sh`. Dette script indeholder de tidligere nævnte `docker exec` kommandoer til at hente flere modeller på én gang.
+
+Kør scriptet fra roden af projektet:
+```bash
+./pull_models.sh
+```
+
+Dette script vil køre kommandoerne for at hente følgende modeller:
+- `gemma3:4b` (automatisk ved serverstart via `docker-compose.yml`)
+- `gemma2:9b`
+- `phi3`
+- `llama3.2:3b`
+- `llama3.1:8b`
+
 
 ### Andre gode modeller til din hardware:
 - **Llama 3 (8B):** Den nyeste standard fra Meta. Kan være lidt tung på CPU, men er meget klog.
@@ -59,3 +78,4 @@ Når du er færdig med at bruge serveren, kan du stoppe den for at frigive RAM o
 ```bash
 docker-compose down
 ```
+*Bemærk: `GEMINI.md` filen er ikke direkte linket i denne `README.md`.*

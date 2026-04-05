@@ -10,7 +10,5 @@ services:
     volumes:
       - ollama_data:/root/.ollama
     restart: unless-stopped
-    entrypoint: ["/bin/sh", "-c", "ollama serve & sleep 10 && ollama pull gemma3:4b && wait"]
-
-volumes:
+    entrypoint: ["/bin/sh", "-c", "ollama serve & sleep 10 && ollama pull gemma3:4b && wait"]volumes:
   ollama_data:
