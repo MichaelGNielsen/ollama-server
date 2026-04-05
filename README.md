@@ -29,6 +29,7 @@ Kør denne kommando for at hente og tale med modellen:
 ```bash
 docker exec -it ollama-standalone ollama run phi3
 docker exec -it ollama-standalone ollama run llama3.2:3b
+docker exec -it ollama-standalone ollama run gemma3:4b
 ```
 
 ### Andre gode modeller til din hardware:

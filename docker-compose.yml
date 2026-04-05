@@ -5,10 +5,12 @@ services:
     ports:
       # Isoleret port (11435) for at undgå konflikt med nativ Ollama (11434)
       - "11435:11434"
+    environment:
+      - OLLAMA_NUM_CTX=32768
     volumes:
       - ollama_data:/root/.ollama
     restart: unless-stopped
-    entrypoint: ["/bin/sh", "-c", "ollama serve & sleep 10 && ollama pull llama3.2:3b && wait"]
+    entrypoint: ["/bin/sh", "-c", "ollama serve & sleep 10 && ollama pull gemma3:4b && wait"]
 
 volumes:
   ollama_data:
