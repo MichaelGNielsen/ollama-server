@@ -78,4 +78,8 @@ Når du er færdig med at bruge serveren, kan du stoppe den for at frigive RAM o
 ```bash
 docker-compose down
 ```
-*Bemærk: `GEMINI.md` filen er ikke direkte linket i denne `README.md`.*
+
+**Projekt Kontrakt:**
+- [GEMINI.md](/GEMINI.md)
+
+*Bemærk: Filen `GEMINI.md` indeholder projektets overordnede kontrakt og workflow.*
