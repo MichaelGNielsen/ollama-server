@@ -1,7 +1,7 @@
 services:
   ollama:
     image: ollama/ollama:latest
-    container_name: ollama-standalone
+    container_name: ollama
     ports:
       # Tilbage til standard port
       - "11434:11434"
