@@ -27,11 +27,11 @@ Microsofts **Phi-3** er en lille, men kraftfuld model, der fungerer rigtig godt 
 
 Kør denne kommando for at hente og tale med modellen:
 ```bash
-docker exec -it ollama-standalone ollama run phi3
-docker exec -it ollama-standalone ollama run llama3.2:3b
-docker exec -it ollama-standalone ollama run gemma3:4b
-docker exec -it ollama-standalone ollama run gemma2:9b
-docker exec -it ollama-standalone ollama run llama3.1:8b
+docker exec -it ollama ollama run phi3
+docker exec -it ollama ollama run llama3.2:3b
+docker exec -it ollama ollama run gemma3:4b
+docker exec -it ollama ollama run gemma2:9b
+docker exec -it ollama ollama run llama3.1:8b
 ```
 
 ### Scripted Model Downloads
@@ -54,11 +54,11 @@ Dette script vil køre kommandoerne for at hente følgende modeller:
 ### Andre gode modeller til din hardware:
 - **Llama 3 (8B):** Den nyeste standard fra Meta. Kan være lidt tung på CPU, men er meget klog.
   ```bash
-  docker exec -it ollama-standalone ollama run llama3
+  docker exec -it ollama ollama run llama3
   ```
 - **Mistral (7B):** En god all-round model.
   ```bash
-  docker exec -it ollama-standalone ollama run mistral
+  docker exec -it ollama ollama run mistral
   ```
 
 ## Vedvarende Modeller og Genstart

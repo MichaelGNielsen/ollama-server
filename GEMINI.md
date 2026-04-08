@@ -39,7 +39,7 @@ docker-compose logs -f
 ### Pulling Models
 Once the server is running, you can pull models using the `docker exec` command:
 ```bash
-docker exec -it ollama-standalone ollama run llama3
+docker exec -it ollama ollama run llama3
 ```
 
 ## Development Conventions
