@@ -9,6 +9,8 @@ MODELS=(
   "gemma4:e2b"
   "gemma4:e4b"
   "gemma4:latest"
+  "gemma4:26b"
+  "gemma4:31b"
 )
 
 for model in "${MODELS[@]}"; do
@@ -19,8 +21,8 @@ for model in "${MODELS[@]}"; do
   # Vi fjerner -it her for at undgå problemer i scripts
   docker exec ollama ollama pull "$model"
   
-  echo "Færdig med $model. Venter 10 sekunder..."
-  sleep 10
+  echo "Færdig med $model. Venter 1 sekunder..."
+  sleep 1
 done
 
 echo "Alle modeller er forsøgt hentet!"
