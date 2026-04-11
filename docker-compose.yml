@@ -3,6 +3,7 @@ services:
   ollama:
     image: ollama/ollama:latest
     container_name: ollama
+    pull_policy: always
     ports:
       # Tilbage til standard port
       - "11434:11434"
