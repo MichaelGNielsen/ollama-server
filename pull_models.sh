@@ -12,6 +12,10 @@ MODELS=(
   "gemma4:latest"
   "gemma4:26b"
   "gemma4:31b"
+  "qwen3.5:9b"
+  "qwen3.5:27b"
+  "qwen3.5:latest"
+  "qwen3-coder:latest"
 )
 
 for model in "${MODELS[@]}"; do
