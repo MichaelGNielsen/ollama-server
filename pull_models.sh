@@ -6,6 +6,7 @@ MODELS=(
   "phi3"
   "llama3.2:3b"
   "llama3.1:8b"
+  "llama3.1:latest"
   "gemma4:e2b"
   "gemma4:e4b"
   "gemma4:latest"
