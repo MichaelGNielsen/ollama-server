@@ -16,6 +16,9 @@ MODELS=(
   "qwen3.5:27b"
   "qwen3.5:latest"
   "qwen3-coder:latest"
+  "deepseek-r1:1.5b"
+  "deepseek-r1:latest"
+  "deepseek-r1:32b"
 )
 
 for model in "${MODELS[@]}"; do
