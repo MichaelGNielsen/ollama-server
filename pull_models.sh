@@ -2,6 +2,8 @@
 
 # Liste over modeller
 MODELS=(
+  "deepseek-v4-flash:cloud"
+  "gemma4:31b-cloud"
   "gemma2:9b"
   "phi3"
   "llama3.2:3b"
