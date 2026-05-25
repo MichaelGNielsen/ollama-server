@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Kør dit hardware-tjek
-./check_gpu.sh
+./nvidia_check.sh
 GPU_STATUS=$?
 
 if [ $GPU_STATUS -eq 0 ]; then
