@@ -1,5 +1,5 @@
 # Liste over modeller
-MODELS=(
-  "gemma3n:latest"
-  "gemma3n:e2b"
-)
+ 
+gemma3n:latest
+gemma3n:e2b
+ 

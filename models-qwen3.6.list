@@ -1,5 +1,5 @@
 # Liste over modeller
-MODELS=(
-  "qwen3.6:latest"
-  "qwen3.6:27b"
-)
+ 
+qwen3.6:latest
+qwen3.6:27b
+ 

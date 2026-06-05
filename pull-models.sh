@@ -23,8 +23,8 @@ process_file() {
         # Henter modellen via Docker
         docker exec ollama ollama pull "$model"
         
-        echo "Færdig med $model. Venter 1 sekund..."
-        sleep 1
+        echo "Færdig med $model. Venter .1 sekund..."
+        sleep .1
     done < "$FILE"
 }
 
