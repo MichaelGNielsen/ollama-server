@@ -7,14 +7,14 @@ MODELS=(
   "deepseek-r1:8b" 
   "llama3.1" 
   "llama3.2" 
-  "llama3.3"
   "gemma4:e2b" 
   "gemma4:e4b" 
   "gemma4:12b"
 )
 
 # Den fælles test-prompt
-PROMPT="Hvad er 2+2?"
+#PROMPT="Hvad er 2+2?"
+PROMPT="Skriv en hurtig Python-funktion, der tjekker om en streng er et palindrom. Funktionen skal ignorere store/små bogstaver. Forklar logikken med én enkelt sætning."
 
 echo "=========================================================="
 echo " Starting Ollama Benchmark on NUC5 (NVIDIA GB10)"
