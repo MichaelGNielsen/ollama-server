@@ -1,0 +1,4 @@
+# Liste over modeller
+MODELS=(
+  "phi3"
+)

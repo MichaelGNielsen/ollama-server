@@ -12,6 +12,7 @@ The setup consists of a single service running the official Ollama image.
 
 - **Port:** Exposes `11434` for API and UI interactions.
 - **Persistence:** Uses a Docker volume named `ollama_data` to store downloaded models and configuration across container restarts.
+- **Blackwell GPU Support:** Includes `CUDA_FORWARD_COMPAT_DISABLE=0` to enable forward compatibility for newer NVIDIA architectures like Blackwell.
 
 ## Operational Commands
 
