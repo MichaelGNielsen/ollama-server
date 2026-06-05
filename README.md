@@ -79,7 +79,10 @@ Når du er færdig med at bruge serveren, kan du stoppe den for at frigive RAM o
 docker-compose down
 ```
 
+## docs filer
+- [docs/benchmark.md](docs/benchmark.md)
+
 **Projekt Kontrakt:**
-- [GEMINI.md](/GEMINI.md)
+- [GEMINI.md](/GEMINI.md) - benchmark for nuc5 med NVIDIA GB10
 
 *Bemærk: Filen `GEMINI.md` indeholder projektets overordnede kontrakt og workflow.*
