@@ -13,3 +13,5 @@ else
     # Her starter vi kun standard-tjenesten uden GPU-krav
     docker compose up -d
 fi
+
+nvidia-smi
