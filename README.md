@@ -81,6 +81,7 @@ docker-compose down
 
 ## docs filer
 - [docs/benchmark.md](docs/benchmark.md)
+- [docs/netværk.md](docs/netværk.md)
 
 **Projekt Kontrakt:**
 - [GEMINI.md](/GEMINI.md) - benchmark for nuc5 med NVIDIA GB10
