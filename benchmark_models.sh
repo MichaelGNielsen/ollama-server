@@ -4,13 +4,20 @@
 MODELS=(
   "codegemma" 
   "gemma2" 
+  "gemma3:4b"
   "deepseek-r1:8b" 
+  "llama3"
   "llama3.1" 
   "llama3.2" 
   "gemma4:e2b" 
   "gemma4:e4b" 
   "gemma4:12b"
+  "gemma4:26b"
+  "gemma4:31b"
+  "qwen3.5"
+  "qwen3.6:35b"
 )
+
 
 # Den fælles test-prompt
 #PROMPT="Hvad er 2+2?"
@@ -41,7 +48,11 @@ for MODEL in "${MODELS[@]}"; do
     RESPONSE=$(curl -s http://localhost:11434/api/generate -d "{
       \"model\": \"$MODEL\",
       \"prompt\": \"$PROMPT\",
-      \"stream\": false
+      \"stream\": false,
+      \"options\": {
+        \"num_predict\": 256,
+        \"num_ctx\": 8192
+      }
     }")
 
     # Udtræk eval_rate (tokens pr. sekund) fra JSON-svaret

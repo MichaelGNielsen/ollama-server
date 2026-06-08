@@ -1,4 +1,45 @@
 # benchmark
+forskellige nyttige tool til GPU monitor:
+```bash
+# ubuntu-drivers devices
+
+ubuntu-drivers devices
+udevadm hwdb is deprecated. Use systemd-hwdb instead.
+udevadm hwdb is deprecated. Use systemd-hwdb instead.
+udevadm hwdb is deprecated. Use systemd-hwdb instead.
+udevadm hwdb is deprecated. Use systemd-hwdb instead.
+udevadm hwdb is deprecated. Use systemd-hwdb instead.
+udevadm hwdb is deprecated. Use systemd-hwdb instead.
+udevadm hwdb is deprecated. Use systemd-hwdb instead.
+udevadm hwdb is deprecated. Use systemd-hwdb instead.
+== /sys/devices/pci000f:00/000f:00:00.0/000f:01:00.0 ==
+modalias : pci:v000010DEd00002E12sv000010DEsd00000000bc03sc00i00
+vendor   : NVIDIA Corporation
+driver   : nvidia-driver-580-server-open - distro non-free
+driver   : nvidia-driver-595 - distro non-free
+driver   : nvidia-driver-595-server-open - distro non-free
+driver   : nvidia-driver-595-open - distro non-free recommended
+driver   : nvidia-driver-595-server - distro non-free
+driver   : nvidia-driver-580 - distro non-free
+driver   : nvidia-driver-580-server - distro non-free
+driver   : nvidia-driver-580-open - distro non-free
+driver   : xserver-xorg-video-nouveau - distro free builtin
+
+# update & install
+sudo apt update
+sudo apt install nvidia-driver-550 nvidia-utils-550
+
+# nvidia-smi 
+nvidia-smi
+watch -n 1 nvidia-smi
+
+# install & nvtop
+sudo apt update && sudo apt install -y nvtop
+nvtop
+```
+
+- nvidia-smi
+- 
 
 ```bash
 ./benchmark_models.sh 
@@ -15,7 +56,9 @@ llama3.1           | Succes               | 37.43 t/s
 llama3.2           | Succes               | 83.36 t/s      
 gemma4:e2b         | Succes               | 101.22 t/s     
 gemma4:e4b         | Succes               | 57.09 t/s      
-gemma4:12b         | Succes               | 25.05 t/s      
+gemma4:12b         | Succes               | 25.05 t/s    
+gemma4:26b         | Succes               | 61.57 t/s   
+gemma4:31b         | Succes               | 8.70 t/s     
 ----------------------------------------------------------
 Benchmark færdig!
 ```
