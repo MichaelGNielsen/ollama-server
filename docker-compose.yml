@@ -10,10 +10,12 @@ services:
     environment:
       - OLLAMA_NUM_CTX=32768
       - CUDA_FORWARD_COMPAT_DISABLE=0
+      - OLLAMA_NUM_PARALLEL=4
     volumes:
       - ollama_data:/root/.ollama
     networks:
       - gs-network
+    ipc: host
     restart: unless-stopped
     entrypoint: ["/bin/sh", "-c", "ollama serve & sleep 10; ollama pull gemma3:4b; ollama pull gemma2; wait"]
 
