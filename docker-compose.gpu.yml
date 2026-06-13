@@ -1,3 +1,10 @@
+# NVIDIA GPU override
+# Anvendes på:
+#   - NUC5 + ASUS GX10 (GB10 Blackwell, ARM64)
+#   - Windows 11 + RTX (x86_64 via WSL2)
+#
+# Brug: docker compose -f docker-compose.yml -f docker-compose.gpu.yml up -d
+#   eller: ./start.sh (auto-detekterer GPU)
 services:
   ollama:
     deploy:
