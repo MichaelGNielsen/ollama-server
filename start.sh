@@ -10,10 +10,15 @@ NC='\033[0m'
 echo "=== Ollama Server Starter ==="
 
 # Sørg for, at mcp-network eksisterer
-docker network inspect mcp-network >/dev/null 2>&1 || {
+#docker network inspect mcp-network >/dev/null 2>&1 || {
+#    echo -e "${YELLOW}Opretter mcp-network...${NC}"
+#    docker network create mcp-network
+#}
+
+if ! docker network inspect mcp-network >/dev/null 2>&1; then
     echo -e "${YELLOW}Opretter mcp-network...${NC}"
     docker network create mcp-network
-}
+fi
 
 # Tjek om .env findes, ellers kopiér fra .env.example
 if [ ! -f ".env" ]; then
@@ -46,3 +51,5 @@ fi
 echo -e "${GREEN}Done.${NC}"
 echo "Logs: docker compose logs -f"
 echo "Stop: ./stop.sh"
+
+docker exec -it ollama ollama ps
