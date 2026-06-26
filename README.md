@@ -141,3 +141,7 @@ Brug:
 
 Ollama slutter sig til `mcp-network` (eksternt Docker-netværk). `start.sh` opretter det automatisk hvis det mangler.
 Se [docs/netværk.md](docs/netværk.md) for detaljer.
+
+## Docker commands reference
+
+Se [docs/ollama-docker-cmds.md](docs/ollama-docker-cmds.md) for en oversigt over nyttige Docker-kommandoer til at starte, stoppe og administrere Ollama.
