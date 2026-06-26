@@ -7,27 +7,16 @@ services:
     ports:
       - "11434:11434"
     environment:
-      # Fælles
       - OLLAMA_HOST=0.0.0.0:11434
       - OLLAMA_KEEP_ALIVE=${OLLAMA_KEEP_ALIVE:-24h}
-      # Platform-specifikke (overrid i .env hvis nødvendigt)
-      - OLLAMA_NUM_CTX=${OLLAMA_NUM_CTX:-32768}
+      - OLLAMA_NUM_CTX=${OLLAMA_NUM_CTX:-8192}
       - OLLAMA_NUM_PARALLEL=${OLLAMA_NUM_PARALLEL:-1}
-      # Blackwell (GB10/GX10) forward compat
-      - CUDA_FORWARD_COMPAT_DISABLE=0
     volumes:
       - ollama_data:/root/.ollama
     networks:
       - gs-network
     ipc: host
     restart: unless-stopped
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: all  # Reserverer GPU hvis den findes (f.eks. GX10). Falder tilbage på CPU på NUC5.
-              capabilities: [gpu]
 
 networks:
   gs-network:
