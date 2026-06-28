@@ -41,7 +41,7 @@ if [ $GPU_AVAILABLE -eq 1 ]; then
     # Tjek om det er Blackwell unified memory (GB10/GX10)
     if echo "$GPU_NAME" | grep -qiE "GB10|GX10|Blackwell" || [ "$VRAM_MIB" = "0" ] || [ "$VRAM_MIB" = "[N/A]" ]; then
         echo -e "${GREEN}Blackwell (GB10/GX10) unified memory — ${TOTAL_RAM_GB} GB RAM total${NC}"
-        export OLLAMA_NUM_CTX=32768
+        export OLLAMA_NUM_CTX=262144
         export OLLAMA_NUM_PARALLEL=4
         export OLLAMA_KEEP_ALIVE=24h
         export CUDA_FORWARD_COMPAT_DISABLE=0
